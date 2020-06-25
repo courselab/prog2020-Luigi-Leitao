@@ -43,8 +43,8 @@ void sort (int *a, int *b, int *c)
  if( *b>*a && *b>*c && *c>*a )
  {
  aux = *b;
- *c = *b;
- *b = *a;
+ *b = *c;
+ *c = *a;
  *a = aux;  
  }
  if( *c>*a && *c>*b && *b>*a )
