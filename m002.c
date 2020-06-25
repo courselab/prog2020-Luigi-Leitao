@@ -28,42 +28,44 @@ void sort (int *a, int *b, int *c)
 {
  int aux;
 
- if( *a>*b && *a>*c && *b>*c )
- {
- aux = *b;
- *b = *c;
- *c = aux;  
- }
- if( *a>*b && *a>*c && *c>*b )
- {
- aux = *b;
- *b = *c;
- *c = aux;  
- }
- if( *b>*a && *b>*c && *a>*b )
+  if (*a>*b && *a>*c && *c>*b) 
  {
  aux = *c;
- *c = *a;
+ *b = *c;
+ *b = aux;  
+ }
+ if( *b>*a && *b>*c && *a>*c )
+ {
+ aux = *b;
+ *b = *a;
  *a = aux;  
  }
- if( *b>*a && *b>*c && *b>*a )
+ if( *b>*a && *b>*c && *c>*a )
  {
- aux = *c;
- *c = *a;
+ aux = *b;
+ *c = *b;
+ *b = *a;
  *a = aux;  
  }
  if( *c>*a && *c>*b && *b>*a )
  {
- aux = *b;
- *b = *a;
+ aux = *c;
+ *c = *a;
  *a = aux;  
  }
  if( *c>*a && *c>*b && *a>*b )
  {
- aux = *b;
+ aux = *c;
+ *c = *b;
  *b = *a;
  *a = aux;  
  }
+ if( *a>*b && *a>*c && *b>*c )
+ {
+ *a = *a;
+ *b = *b;
+ *c = *c; 
+ }  
  printf( "a ordem crescente sera: %d\n %d\n %d\n", *a, *b, *c);
 }
 
