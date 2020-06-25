@@ -24,31 +24,24 @@
 int is_prime (int a)
 {
   int i, ds; 
-  int* r;
   
   ds = 0;
-  for ( i = 1; i < a; i = i + 1)
+
+  for ( i = 1; i < a; i++)
   {
   if ( (a % i) == 0)
   {
-    ds = ds + 1;
+    ds++;
   }
-  if ( ds == 0)
-  { 
-  *r = ds;
+  if ( ds == 1)
+  {
+    a = 1;
   }
   else 
   {
-  *r = ds;
+    a = 0;
   }
-  if (*r == 0)
-  {
-    return 1;
-  }
-  else
-  {
-    return 0;
-  }
+  return a;
 }
 
 #define USAGE "m003 <num>\n"
