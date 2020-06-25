@@ -24,51 +24,55 @@
 #define USAGE "m002 <num1> <num2> <num3>\n"
 
 /* Sort three integers x, y, z in ascending order.*/
-void sort (int *a, int *b, int *c)
+void sort (int *c, int *b, int *a)
 {
- int ax;
-  if((*a<=*b) && (*a<=*c))
+ int aux;
+
+  if (*a>*b && *a>*b)
   {
-    if(*c<=*b)
+    if (*c>*b)
     {
       aux = *b;
       *b = *c;
-      *c = aux;
-    }  
-  }
-  if((*b<=*a) && (*b<=*c))
-  {
-    if(*a<=*c)
-    {
-      ax = *a;
-      *a = *b;
-      *b = ax;
+      *c = aux; 
     }
-    if(*c<=*a)
-      ax = *a;
-      *a = *b;
-      *b = ax;
-      ax = *c;
-      *c = *b;
-      *b = ax;
-    }  
   }
-  if((*c<=*a) && (*c<=*b))
+  if (*b>*a && *b>*c)
+  {
+    if (*c>*a)
     {
-    if(*a<=*b){
-      aux = *a;
-      *a = *c;
-      *c = aux;
       aux = *b;
-      *b = *c;
-      *c = aux;
-    }else{
-      aux = *c;
       *c = *a;
+      *b = *c;
       *a = aux;
-    }  
+    }
+    if(*a>*c)
+    {
+      aux = *b;
+      *b = *a;
+      *a = aux;
+    }
   }
-}
+    if(*c>*a && *c>*b)
+    {
+      if (*a>*b)
+      {
+        aux = *c;
+        *c = *b;
+        *b = *a;
+        *a = aux;
+      }
+      if (*b>*a)
+      {
+        aux = *c;
+        *c = *a;
+        *a = aux;
+      }
+
+    }
+  
+    
+  
 }
 
 /* Do not edit this function. */

@@ -26,7 +26,7 @@ int is_prime (int a)
   int i, discriminante;
   
   discriminante = 0;
-  for ( i = 1, i < a, i = i + 1 );
+  for ( i = 1, i < a, i = i + 1 )
   {
   if ( (a % i) == 0)
   {
