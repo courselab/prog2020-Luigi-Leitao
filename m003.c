@@ -23,23 +23,31 @@
 
 int is_prime (int a)
 {
-  int i, discriminante;
+  int i, ds; 
+  int* r;
   
-  discriminante = 0;
-  for ( i = 1, i < a, i = i + 1 )
+  ds = 0;
+  for ( i = 1; i < a; i = i + 1)
   {
   if ( (a % i) == 0)
   {
-    discriminante = discriminante + 1;
+    ds = ds + 1;
   }
-  if ( discriminante = 1)
+  if ( ds == 0)
   { 
-  return 1;
+  *r = ds;
   }
   else 
   {
-  return 0;
+  *r = ds;
   }
+  if (*r == 0)
+  {
+    return 1;
+  }
+  else
+  {
+    return 0;
   }
 }
 
