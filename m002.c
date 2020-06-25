@@ -26,39 +26,42 @@
 /* Sort three integers x, y, z in ascending order.*/
 void sort (int *a, int *b, int *c)
 {
- int aux;
+ int aux1;
+ int aux2;
 
   if (*a>*b && *a>*c && *c>*b) 
  {
- aux = *c;
- *b = *c;
- *b = aux;  
+  aux1 = *b;
+  *b = *c;
+  *c = aux1;  
  }
  if( *b>*a && *b>*c && *a>*c )
  {
- aux = *b;
+ aux1 = *b;
  *b = *a;
- *a = aux;  
+ *a = aux1;  
  }
  if( *b>*a && *b>*c && *c>*a )
  {
- aux = *b;
- *b = *c;
- *c = *a;
- *a = aux;  
+ aux1 = *b;
+ aux2 = *c;
+ *c = *b;
+ *b = aux2;
+ *a = aux1;  
  }
  if( *c>*a && *c>*b && *b>*a )
  {
- aux = *c;
+ aux1 = *c;
  *c = *a;
- *a = aux;  
+ *a = aux1;  
  }
  if( *c>*a && *c>*b && *a>*b )
  {
- aux = *c;
+ aux1 = *c;
+ aux2 = *a;
  *c = *b;
- *b = *a;
- *a = aux;  
+ *b = aux2;
+ *a = aux1;  
  }
  if( *a>*b && *a>*c && *b>*c )
  {
@@ -66,7 +69,6 @@ void sort (int *a, int *b, int *c)
  *b = *b;
  *c = *c; 
  }  
- printf( "a ordem crescente sera: %d\n %d\n %d\n", *a, *b, *c);
 }
 
 /* Do not edit this function. */
