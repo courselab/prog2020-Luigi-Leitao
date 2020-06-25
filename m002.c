@@ -26,49 +26,49 @@
 /* Sort three integers x, y, z in ascending order.*/
 void sort (int *a, int *b, int *c)
 {
- int aux1;
- int aux2;
-
-  if (*a>*b && *a>*c && *c>*b) 
- {
-  aux1 = *b;
-  *b = *c;
-  *c = aux1;  
- }
- if( *b>*a && *b>*c && *a>*c )
- {
- aux1 = *b;
- *b = *a;
- *a = aux1;  
- }
- if( *b>*a && *b>*c && *c>*a )
- {
- aux1 = *b;
- aux2 = *c;
- *c = *b;
- *b = aux2;
- *a = aux1;  
- }
- if( *c>*a && *c>*b && *b>*a )
- {
- aux1 = *c;
- *c = *a;
- *a = aux1;  
- }
- if( *c>*a && *c>*b && *a>*b )
- {
- aux1 = *c;
- aux2 = *a;
- *c = *b;
- *b = aux2;
- *a = aux1;  
- }
- if( *a>*b && *a>*c && *b>*c )
- {
- *a = *a;
- *b = *b;
- *c = *c; 
- }  
+ int ax;
+  if((*a<=*b) && (*a<=*c))
+  {
+    if(*c<=*b)
+    {
+      aux = *b;
+      *b = *c;
+      *c = aux;
+    }  
+  }
+  if((*b<=*a) && (*b<=*c))
+  {
+    if(*a<=*c)
+    {
+      ax = *a;
+      *a = *b;
+      *b = ax;
+    }
+    if(*c<=*a)
+      ax = *a;
+      *a = *b;
+      *b = ax;
+      ax = *c;
+      *c = *b;
+      *b = ax;
+    }  
+  }
+  if((*c<=*a) && (*c<=*b))
+    {
+    if(*a<=*b){
+      aux = *a;
+      *a = *c;
+      *c = aux;
+      aux = *b;
+      *b = *c;
+      *c = aux;
+    }else{
+      aux = *c;
+      *c = *a;
+      *a = aux;
+    }  
+  }
+}
 }
 
 /* Do not edit this function. */

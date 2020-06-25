@@ -23,23 +23,24 @@
 
 int is_prime (int a)
 {
-  int i;
+  int i, discriminante;
   
-  i = a - 1;
-
-   while ( a % i == 0 )
+  discriminante = 0;
+  for ( i = 1, i < a, i = i + 1 );
   {
-    i = i -1;
+  if ( (a % i) == 0)
+  {
+    discriminante = discriminante + 1;
   }
-  if ( i == 1)
-  {
-    return 1;
+  if ( discriminante = 1)
+  { 
+  return 1;
   }
   else 
   {
-    return 0;
+  return 0;
   }
-
+  }
 }
 
 #define USAGE "m003 <num>\n"
