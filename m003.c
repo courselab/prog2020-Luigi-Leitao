@@ -41,6 +41,7 @@ int is_prime (int a)
   {
     a = 0;
   }
+  }
   return a;
 }
 
