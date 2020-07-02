@@ -25,75 +25,37 @@
 #define MAX 256
 
 /* Count the number of letters in string s.*/
+int vale(char a)
+{
+
+int count;
+count = 0;
+
+if(a>='a' && a<='z')
+{
+count = count +1;
+}
+if(a>='A' && a<='Z')
+{
+count = count +1;
+}
+return count;
+}
 
 int lettercount (char *s)
 {
 int i;
 int count;
 count = 0;
+i = 0;
 
-for(i=0;i<MAX;i++)
+while(s[i] != 0)
 {
-switch (s[i])
-{
-case  'a':
-case  'b':
-case  'c':
-case  'd':
-case  'e':
-case  'f':
-case  'g':
-case  'h':
-case  'i':
-case  'j':
-case  'k':
-case  'l':
-case  'm':
-case  'n':
-case  'o':
-case  'p':
-case  'q':
-case  'r':
-case  's':
-case  't':
-case  'u':
-case  'v':
-case  'w':
-case  'x':
-case  'y':
-case  'z':
-case  'A':
-case  'B':
-case  'C':
-case  'D':
-case  'E':
-case  'F':
-case  'G':
-case  'H':
-case  'I':
-case  'J':
-case  'K':
-case  'L':
-case  'M':
-case  'N':
-case  'O':
-case  'P':
-case  'Q':
-case  'R':
-case  'S':
-case  'T':
-case  'U':
-case  'V':
-case  'W':
-case  'X':
-case  'Z':
-count = count + 1;
-break; 
+count = count + vale(s[i]);
+i = i + 1;
 }
 return count;
 }
-}
-
 
 /* Do not edit this function. */
 
