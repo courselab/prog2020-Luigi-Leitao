@@ -35,6 +35,7 @@ count = 0;
 for(i=0;i<MAX;i++)
 {
 switch (s[i])
+{
 case  'a':
 case  'b':
 case  'c':
@@ -90,6 +91,7 @@ count = count + 1;
 break; 
 }
 return count;
+}
 }
 
 
