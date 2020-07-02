@@ -46,15 +46,9 @@ int decimal (char *b)
     count = count + 1*pot2;
   }
   pot2 = pot2*2;
+  }
   return count;
   }
-
-
-
-
-  
-  return 0;
-}
 
 #define USAGE "m004 <string>\n"
 
