@@ -17,6 +17,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+<<<<<<< HEAD
 #define MAX 256
 
 void lastname (char *s)
@@ -55,6 +56,62 @@ void lastname (char *s)
   }
 
   strcpy(s, n);
+=======
+#include <stdio.h>
+
+#define USAGE "m002 <num1> <num2> <num3>\n"
+
+/* Sort three integers x, y, z in ascending order.*/
+void sort (int *c, int *b, int *a)
+{
+ int aux;
+
+  if (*a>*b && *a>*b)
+  {
+    if (*c>*b)
+    {
+      aux = *b;
+      *b = *c;
+      *c = aux; 
+    }
+  }
+  if (*b>*a && *b>*c)
+  {
+    if (*c>*a)
+    {
+      aux = *b;
+      *c = *a;
+      *b = *c;
+      *a = aux;
+    }
+    if(*a>*c)
+    {
+      aux = *b;
+      *b = *a;
+      *a = aux;
+    }
+  }
+    if(*c>*a && *c>*b)
+    {
+      if (*a>*b)
+      {
+        aux = *c;
+        *c = *b;
+        *b = *a;
+        *a = aux;
+      }
+      if (*b>*a)
+      {
+        aux = *c;
+        *c = *a;
+        *a = aux;
+      }
+
+    }
+  
+    
+  
+>>>>>>> d47a60380a75bd15bec6217270cfe855c1407b98
 }
 
 
