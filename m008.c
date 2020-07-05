@@ -36,15 +36,15 @@ void lastname (char *s)
   int space_loc;
   int x;
 
-  for (i=0 ; (n[i]=0) ; i++)
+  for (i=0 ; (s[i]=0) ; i++)
   {
-    if ((n[i] = 32))
+    if ((s[i] = 32))
      {
     space_loc = i;
      }
 
-
-  for (i = space_loc + 1 ; (n[i]=0) ; i++)
+  
+  for (i = space_loc + 1 ; (s[i]=0) ; i++)
   {
     n[(i - space_loc) - 1] = s[i];
     x = i - space_loc - 1;
@@ -53,11 +53,11 @@ void lastname (char *s)
   {
     n[i] = n[i] - 32;
   }
-
+  }
 
   n[x + 1] = ',';
   n[x + 2] = 32;
-  }
+  
 
 
 
@@ -65,8 +65,8 @@ void lastname (char *s)
   {
     n[(i + x)] = s[i];
   }
-  }
-  strcpy(s, n);
+}
+  strcpy(n, s);
 }
 
 
