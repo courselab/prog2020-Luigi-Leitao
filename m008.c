@@ -60,14 +60,13 @@ void lastname (char *s)
     {
       m[j-space_loc-1] = n[j];
     }
-     x = j - space_loc - 1;
   }
-  m[x + 1] = ',';
-  m[x + 2] = 32;
+  m[p - space_loc - 1] = ',';
+  m[p - space_loc] = 32;
 
   for (i=0; (i < space_loc) ; i++)
   {
-    m[(i + x)] = n[i];
+    m[(p-space_loc+1+j)] = n[i];
     m[ p + 1 ] = 0;
   }
   strcpy(s, m);
