@@ -35,15 +35,14 @@ void lastname (char *s)
   char m[MAX];
   int i, j;
   int space_loc;
-  int x;
   int p;
 
   strcpy(n, s);
   p = strlen(s);
 
-  while (s[i] != 0)
+  while (n[i] != 0)
   {
-    if ((s[i] = 32))
+    if ((n[i] = 32))
      {
     space_loc = i;
      }
@@ -66,7 +65,7 @@ void lastname (char *s)
 
   for (i=0; (i < space_loc) ; i++)
   {
-    m[(p-space_loc+1+j)] = n[i];
+    m[(p-space_loc+1+i)] = n[i];
     m[ p + 1 ] = 0;
   }
   strcpy(s, m);
