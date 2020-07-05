@@ -24,19 +24,14 @@
 
 int greatest (int a, int b, int c)
 {
-<<<<<<< HEAD
   int w;
 
   w = a;
 
   if ( w <= b )
-=======
-
-  int w;
   w = a;
 
   if ( w <= b)
->>>>>>> d47a60380a75bd15bec6217270cfe855c1407b98
   {
     w = b;
   }
