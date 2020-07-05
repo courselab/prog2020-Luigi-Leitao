@@ -32,50 +32,46 @@
 void lastname (char *s)
 {
   char n[MAX];
-  int i;
+  char m[MAX];
+  int i, j;
   int space_loc;
   int x;
+  int p;
 
-  for (i=0 ; (s[i]=0) ; i++)
+  strcpy(n, s);
+  p = strlen(s);
+
+  while (s[i] != 0)
   {
     if ((s[i] = 32))
      {
     space_loc = i;
      }
-
-  
-  for (i = space_loc + 1 ; (s[i]=0) ; i++)
-  {
-    n[(i - space_loc) - 1] = s[i];
-    x = i - space_loc - 1;
-
-  if(n[i] >= 'a' && n[i] <= 'z')
-  {
-    n[i] = n[i] - 32;
-  }
+     i++;
   }
 
-  n[x + 1] = ',';
-  n[x + 2] = 32;
-  
-
-
+  for (j = space_loc + 1 ; j < p ; j++)
+  {
+   if( (n[j] >= 'a') && (n[j] <= 'z') ) 
+   {
+    m[j - space_loc - 1] = n[j] - 32;
+   }
+    else
+    {
+      m[j-space_loc-1] = n[j];
+    }
+     x = j - space_loc - 1;
+  }
+  m[x + 1] = ',';
+  m[x + 2] = 32;
 
   for (i=0; (i < space_loc) ; i++)
   {
-    n[(i + x)] = s[i];
+    m[(i + x)] = n[i];
+    m[ p + 1 ] = 0;
   }
+  strcpy(s, m);
 }
-  strcpy(n, s);
-}
-
-
-
-/* Do not edit this function. */
-
-
-
-
 /* Do not edit this function. */
 
 int main (int argc, char **argv)
