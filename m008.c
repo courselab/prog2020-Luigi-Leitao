@@ -57,17 +57,19 @@ void lastname (char *s)
    }
     else
     {
-      m[j-space_loc-1] = n[j];
+      m[j - space_loc - 1] = n[j];
     }
   }
-  m[p - space_loc - 1] = ',';
+  
+  m[space_loc - 1] = ',';
   m[p - space_loc] = 32;
 
   for (i=0; (i < space_loc) ; i++)
   {
-    m[(p-space_loc+1+i)] = n[i];
-    m[ p + 1 ] = 0;
+    m[(space_loc+1+i)] = n[i];
   }
+    m[ p + 1 ] = 0;
+  
   strcpy(s, m);
 }
 /* Do not edit this function. */
