@@ -40,6 +40,7 @@ void lastname (char *s)
   strcpy(n, s);
   p = strlen(s);
 
+  i=0;
   while (n[i] != 0)
   {
     if ((n[i] = 32))
@@ -60,13 +61,13 @@ void lastname (char *s)
       m[j - space_loc - 1] = n[j];
     }
   }
-  
+
   m[space_loc - 1] = ',';
   m[p - space_loc] = 32;
 
-  for (i=0; (i < space_loc) ; i++)
+  for (j=0; (j < space_loc) ; j++)
   {
-    m[(space_loc+1+i)] = n[i];
+    m[(space_loc+1+j)] = n[j];
   }
     m[ p + 1 ] = 0;
   
