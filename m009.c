@@ -36,7 +36,7 @@ void sort (int* vector, int n)
     value = vector[i];
     j = i - 1;
 
-    while( j < n && value < vector[j] )
+    while( j >= 0  && value < vector[j] )
     {
       vector[j + 1] = vector[j];
       j--;
