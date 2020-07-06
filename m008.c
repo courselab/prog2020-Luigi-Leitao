@@ -43,7 +43,7 @@ void lastname (char *s)
   i=0;
   while (n[i] != 0)
   {
-    if ((n[i] = 32))
+    if ((n[i] == 32))
      {
     space_loc = i;
      }
