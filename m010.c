@@ -23,7 +23,7 @@
 
 #define USAGE "m010 <day> <month>\n"
 
-enum {sun = 1, mon, tue, wed, thu, fri, sat};
+enum {sun, mon, tue, wed, thu, fri, sat};
 
 /* Return the day of the week in the numeric form:
    Sunday=0, Monday=1... Saturday=6.*/
