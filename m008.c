@@ -62,12 +62,12 @@ void lastname (char *s)
     }
   }
 
-  m[space_loc - 1] = ',';
-  m[p - space_loc] = 32;
+  m[p - space_loc - 2] = ',';
+  m[p - space_loc - 1] = 32;
 
   for (j=0; (j < space_loc) ; j++)
   {
-    m[(space_loc+1+j)] = n[j];
+    m[p-space_loc+j] = n[j];
   }
     m[ p + 1 ] = 0;
   
