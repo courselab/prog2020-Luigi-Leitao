@@ -25,13 +25,37 @@
 #define MAX 256
 
 /* Count the number of letters in string s.*/
+int vale(char a)
+{
+
+int count;
+count = 0;
+
+if(a>='a' && a<='z')
+{
+count = count +1;
+}
+if(a>='A' && a<='Z')
+{
+count = count +1;
+}
+return count;
+}
 
 int lettercount (char *s)
 {
-  return 0;
+int i;
+int count;
+count = 0;
+i = 0;
+
+while(s[i] != 0)
+{
+count = count + vale(s[i]);
+i = i + 1;
 }
-
-
+return count;
+}
 
 /* Do not edit this function. */
 

@@ -29,9 +29,26 @@
 
 int decimal (char *b)
 {
+  int count;
+  int n;
+  int i;
+  int pot2;
   
-  return 0;
-}
+
+  pot2 = 1;
+  count = 0;
+
+  n =  strlen(b);
+  for( i=n-1; i>=0; i--)
+  {
+  if (b[i]=='1')
+  {
+    count = count + 1*pot2;
+  }
+  pot2 = pot2*2;
+  }
+  return count;
+  }
 
 #define USAGE "m004 <string>\n"
 
